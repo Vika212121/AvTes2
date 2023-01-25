@@ -192,7 +192,7 @@ public class OrderFormTest {
         driver.findElement(By.cssSelector("[data-test-id=\"name\"] .input__control")).sendKeys("(Студент.,? Нетологии;");
         driver.findElement(By.cssSelector("[data-test-id=\"phone\"] .input__control")).sendKeys("+7987---6543210");
         driver.findElement(By.cssSelector("[type=\"button\"]")).click();
-        String actual = driver.findElement(By.cssSelector("[data-test-id=\"name\"] .input_ _sub")).getText().trim();
+        String actual = driver.findElement(By.cssSelector("[data-test-id=\"name\"] .input__sub")).getText().trim();
         assertEquals("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы.", actual);
     }
 
